@@ -26,7 +26,6 @@ header {
 
     & img {
         width: 250px;
-
     }
 
     & nav {
@@ -103,7 +102,6 @@ section {
                     cursor: pointer;
                     font-weight: bold;
                 }
-
             }
         }
 
@@ -130,7 +128,6 @@ section {
             img {
                 transform: scale(-1);
             }
-
         }
 
         & button {
@@ -187,36 +184,31 @@ section {
     }
 }
 
-
 section {
     & .list {
-    --calculation: 1;
+        --calculation: 1;
 
         & .item {
-            transform: translateX(calc 100vw * var(--calculation));
-            transition: 0.5s;
+            transform: translateX(calc(100vw * var(--calculation)));
+            transition: opacity 0.5s, transform 0.5s;
             opacity: 0;
-
 
             & .car-image {
                 & .img {
                     transform: rotate(0);
                     transition: 0.5s;
                     transition-delay: 0.3s;
-
                 }
             }
 
             & .content {
-
                 & .car-info,
                 h2,
                 .description,
                 .info {
-                    transform: translateX(calc 200px * var(--calculation));
+                    transform: translateX(calc(200px * var(--calculation)));
                     transition: 0.7s;
                     transition-delay: 0.3s;
-
                 }
 
                 & h2 {
@@ -230,16 +222,13 @@ section {
                 & .info {
                     transition-delay: 0.9s;
                 }
-
-
             }
         }
 
         & .active {
             transform: translateX(0);
-            transition: 0.5s;
+            transition: opacity 0.5s, transform 0.5s;
             opacity: 1;
-
 
             & .car-image {
                 & .img {
@@ -248,16 +237,13 @@ section {
             }
 
             & .content {
-
                 & .car-info,
                 h2,
                 .description,
                 .info {
                     transform: translateX(0);
                 }
-
             }
         }
     }
-
 }
